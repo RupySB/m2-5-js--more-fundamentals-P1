@@ -11,11 +11,18 @@
 function sumDigits(input) {
   // Your code here
 }
+let sum = array.reduce(function (a, b) {
+  return a + b;
+}, 0);
 
 // Add 5 more test cases here! 7 total
 expect(sumDigits([2, 5]), 7);
-expect(sumDigits([-1, 0]), -1);
-
+expect(sumDigits([-4, 5]), 1);
+expect(sumDigits([-5, 3]), -2);
+expect(sumDigits([-8, 6]), -2);
+expect(sumDigits([-3, 7]), 4);
+expect(sumDigits([0, 2]), 2);
+expect(sumDigits([5, 9]), 14);
 /**
  * -------------------------------------------------------------------
  * ⚠️ No changes necessary below. ⚠️
@@ -23,7 +30,7 @@ expect(sumDigits([-1, 0]), -1);
  */
 function expect(result, value) {
   if (result === value) {
-    console.log('✅ Test succeeded');
+    console.log("✅ Test succeeded");
   } else {
     console.log(`⛔️ Expected “${result}” to equal “${value}”`);
   }
