@@ -13,20 +13,28 @@ const duplicateString = (x) => {
 };
 
 const reverseString = (str) => {
-  const splitString = str.split(''); // var splitString = "hello".split("");
+  const splitString = str.split(""); // var splitString = "hello".split("");
   const reverseArray = splitString.reverse(); // var reverseArray = ["h", "e", "l", "l", "o"].reverse();
-  return reverseArray.join(''); // var joinArray = ["o", "l", "l", "e", "h"].join("");
+  return reverseArray.join(""); // var joinArray = ["o", "l", "l", "e", "h"].join("");
 };
 
 // Expand each of the following and get the result of the expression
 // 1-1
 square(decrement(square(decrement(3))));
 
+// x * x * x
+
 // 1-2
 decrement(decrement(square(square(3))));
 
+//x * x * x * (x * x * x);
+
 // 1-3
-duplicateString(reverseString('hello'));
+duplicateString(reverseString("hello"));
+
+// o l l e h
 
 // 1-4
-reverseString(duplicateString(duplicateString('foo')));
+reverseString(duplicateString(duplicateString("foo")));
+
+// foo foo
