@@ -11,12 +11,17 @@ function lastCharacter(str) {
   // Your code here
 }
 
+let res = str.charAt();
+console.log(res);
 // Step 2
 // You're given 1 test case. Add 4 more, making sure to cover all of the
 // conditions specified above (don't forget empty string and number!!)
 
-expect(lastCharacter('max'), 'x');
-
+expect(lastCharacter("max"), "x");
+expect(lastCharacter("Bobby"), "y");
+expect(lastCharacter("book"), "k");
+expect(lastCharacter("pineapple"), "e");
+expect(lastCharacter("options"), "s");
 // Add 4 more test cases here!
 // 🌠 NOTE 🌠
 // Be creative with your tests!
@@ -34,7 +39,7 @@ expect(lastCharacter('max'), 'x');
  */
 function expect(result, value) {
   if (result === value) {
-    console.log('✅ Test succeeded');
+    console.log("✅ Test succeeded");
   } else {
     console.log(`⛔️ Expected “${result}” to equal “${value}”`);
   }
