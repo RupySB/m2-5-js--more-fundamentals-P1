@@ -10,15 +10,24 @@ function firstLetter(str) {
   // Your code here
 }
 
+let anyString = "Test sentence";
+console.log("'" + anyString.charAt() + "'");
+
 // Step 2
 // We need 5 test cases. The first input is provided.
 // Don't forget to test all of the question parameters
 
-expect(firstLetter('max'), 'm');
-expect(firstLetter('bacon'), 'b');
-expect(firstLetter('Zebra'), 'Z');
-expect(firstLetter('lion'), 'l');
-expect(firstLetter(''), undefined);
+expect(firstLetter("max"), "m");
+expect(firstLetter("bacon"), "b");
+expect(firstLetter("Zebra"), "Z");
+expect(firstLetter("lion"), "l");
+expect(firstLetter(""), undefined);
+
+// ⛔️ Expected “undefined” to equal “m”
+// ⛔️ Expected “undefined” to equal “b”
+// ⛔️ Expected “undefined” to equal “Z”
+// ⛔️ Expected “undefined” to equal “l”
+// ✅ Test succeeded
 
 // Step 3
 // Run this file with Node.
@@ -31,7 +40,7 @@ expect(firstLetter(''), undefined);
  */
 function expect(result, value) {
   if (result === value) {
-    console.log('✅ Test succeeded');
+    console.log("✅ Test succeeded");
   } else {
     console.log(`⛔️ Expected “${result}” to equal “${value}”`);
   }
