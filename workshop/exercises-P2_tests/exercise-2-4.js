@@ -9,11 +9,11 @@
 // getLetterAtIndex("", 4);      // undefined
 // getLetterAtIndex("abc", 0);   // a
 
-function getLetterAtIndex(str, index) {
-  // Your code here
+function getLetterAtIndex(array) {
+  let value = arr.charAt(array[1]);
+  if (value === "") return undefined;
+  return value;
 }
-let anyString = "Test sentence";
-console.log("'" + anyString.charAt() + "'");
 
 // Add 6 more test cases
 expect(getLetterAtIndex("hello", 4), "o");
