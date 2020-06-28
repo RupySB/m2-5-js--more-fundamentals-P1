@@ -12,8 +12,19 @@
 // f(["foo", -1]) // ""
 
 function repeat(arr) {
-  // Your code here
+  let str = arr[0];
+  let number = arr[1];
+  if (typeof str !== "string" && typeof count !== "number") return undefined;
+  return arr[0] * arr[1];
 }
+
+// f(["vet", 3]) // "vetvetvet"
+// f(["hey", 2]) // "heyhey"
+// f(["bye", 1]) // "bye"
+// f(["cat",3]) // "catcatcat"
+// f(["puppy", 4]) // "puppypuppypuppypuppy"
+// f(["cool",5]) // "coolcoolcoolcoolcool"
+// f(["fluffy",4]) // "fluffyfluffyfluffyfluffy"
 
 // We need 7 test cases.
 // Don't forget to test all of the question parameters
@@ -25,7 +36,7 @@ function repeat(arr) {
  */
 function expect(result, value) {
   if (result === value) {
-    console.log('✅ Test succeeded');
+    console.log("✅ Test succeeded");
   } else {
     console.log(`⛔️ Expected “${result}” to equal “${value}”`);
   }
