@@ -8,11 +8,13 @@
 // - If it's a number, return `undefined`
 
 function lastCharacter(str) {
-  // Your code here
+  if (str === "") return undefined;
+  return str.charAt(str.length - 1);
 }
 
-let res = str.charAt();
-console.log(res);
+// let res = str.charAt();
+// console.log(res);
+
 // Step 2
 // You're given 1 test case. Add 4 more, making sure to cover all of the
 // conditions specified above (don't forget empty string and number!!)
