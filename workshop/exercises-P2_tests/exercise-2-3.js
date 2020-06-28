@@ -8,12 +8,11 @@
 // HINT: You can use the typeof function to check the type of each element:
 //   - `typeof 3` returns 'number')
 
-function sumDigits(input) {
-  // Your code here
+function sumDigits(array) {
+  if (array.length >= 3) return undefined;
+  let sum = array[0] + array[1];
+  return sum;
 }
-let sum = array.reduce(function (a, b) {
-  return a + b;
-}, 0);
 
 // Add 5 more test cases here! 7 total
 expect(sumDigits([2, 5]), 7);
