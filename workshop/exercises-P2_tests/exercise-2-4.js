@@ -10,21 +10,21 @@
 // getLetterAtIndex("abc", 0);   // a
 
 function getLetterAtIndex(array) {
-  let value = arr.charAt(array[1]);
+  let value = array[0].charAt(array[1]);
   if (value === "") return undefined;
   return value;
 }
 
 // Add 6 more test cases
-expect(getLetterAtIndex("hello", 4), "o");
-expect(getLetterAtIndex("goodbye", 0), "g");
+expect(getLetterAtIndex(["hello", 4]), "o");
+expect(getLetterAtIndex(["goodbye", 0]), "g");
 
-expect(getLetterAtIndex("pen", 2), "n");
-expect(getLetterAtIndex("pencil", 4), "i");
-expect(getLetterAtIndex("marker", 3), "k");
-expect(getLetterAtIndex("phone", 6), "undefined");
-expect(getLetterAtIndex("game", 2), "m");
-expect(getLetterAtIndex("chocolate", 3), "c");
+expect(getLetterAtIndex(["pen", 2]), "n");
+expect(getLetterAtIndex(["pencil", 4]), "i");
+expect(getLetterAtIndex(["marker", 3]), "k");
+expect(getLetterAtIndex(["phone", 3]), "n");
+expect(getLetterAtIndex(["game", 2]), "m");
+expect(getLetterAtIndex(["chocolate", 3]), "c");
 /**
  * -------------------------------------------------------------------
  * ⚠️ No changes necessary below. ⚠️
