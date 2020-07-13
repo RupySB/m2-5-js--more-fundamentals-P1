@@ -11,20 +11,29 @@
 // f(["fo", 3]) // "fofofo"
 // f(["foo", -1]) // ""
 
-function repeat(arr) {
-  let str = arr[0];
-  let number = arr[1];
+// function f(arr) {
+//   let str = arr[0];
+//   let count = arr[1];
+//   if (typeof str !== "string" && typeof count !== "number") return undefined;
+//   return arr[0] * arr[1];
+// }
+
+function fillArray(value, len) {
   if (typeof str !== "string" && typeof count !== "number") return undefined;
-  return arr[0] * arr[1];
+  var arr = [];
+  for (var i = 0; i < len; i++) {
+    arr.push(value);
+  }
+  return arr;
 }
 
-// f(["vet", 3]) // "vetvetvet"
-// f(["hey", 2]) // "heyhey"
-// f(["bye", 1]) // "bye"
-// f(["cat",3]) // "catcatcat"
-// f(["puppy", 4]) // "puppypuppypuppypuppy"
-// f(["cool",5]) // "coolcoolcoolcoolcool"
-// f(["fluffy",4]) // "fluffyfluffyfluffyfluffy"
+f(["vet", 3]); // "vetvetvet"
+f(["hey", 2]); // "heyhey"
+f(["bye", 1]); // "bye"
+f(["cat", 3]); // "catcatcat"
+f(["puppy", 4]); // "puppypuppypuppypuppy"
+f(["cool", 5]); // "coolcoolcoolcoolcool"
+f(["fluffy", 4]); // "fluffyfluffyfluffyfluffy"
 
 // We need 7 test cases.
 // Don't forget to test all of the question parameters
