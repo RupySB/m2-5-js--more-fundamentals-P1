@@ -11,29 +11,32 @@
 
 const btnList = document.querySelector("#btn-list");
 
+for (let id = 1; id < 5; id++) {
+  const mainButton = document.getElementById(`btn-${id}`);
+  mainButton.style.backgroundColor = "gold";
+  mainButton.style.opacity = "100";
+}
 
-let initButton=document.getElementById(`btn-${id}`);
-color = ["gold"];
-initButton.onClick = function(){
-    (function loop()
-    {
-        let color = color.shift();
-        initButton.backgroundColor = color;
-    }
-});
+const toggleColor = (id, color) => {
+  const btnElement = document.getElementById(id);
+  const currentColor = btnElement.style.backgroundColor;
+
+  btnElement.style.backgroundColor = currentColor === "gold" ? color : "gold";
+};
 
 const onClick = (x) => {
-const buttonId = x.target.id;
-const buttonElement = document.getElementById(buttonId);
+  const buttonId = x.target.id;
+  const buttonElement = document.getElementById(buttonId);
   switch (buttonId) {
     case "btn-1":
-      buttonElement.style.opacity = 0;
+      buttonElement.style.opacity =
+        buttonElement.style.opacity === "100" ? "0" : "100";
       break;
     case "btn-2":
-      buttonElement.style.background = "crimson";
+      toggleColor(buttonId, "crimson");
       break;
     case "btn-3":
-      buttonElement.style.background = "lightblue";
+      toggleColor(buttonId, "lightblue");
       break;
     case "btn-4":
       buttonElement.classList.add("jitters");
@@ -43,3 +46,12 @@ const buttonElement = document.getElementById(buttonId);
   }
 };
 btnList.addEventListener("click", onClick);
+
+// function fillArray(value, len) {
+//   var arr = [];
+//   for (var i = 0; i < len; i++) {
+//     arr.push(value);
+//   }
+//   return arr;
+// }
+//default color as gold + onclick = toggle
