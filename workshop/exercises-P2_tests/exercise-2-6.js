@@ -17,28 +17,24 @@
 // f(["mult", 2, 3]); // 6
 // f(["spoof", 10, 10]); // undefined
 
-function calculator(array) {
-  let calculations = array[0];
-  switch (calculations) {
-    case "add":
-      let sum = array[0] + array[1];
-      return sum;
-    case "sub":
-      let sub = array[0] - array[1];
-      return sub;
-    case "mult":
-      let mult = array[0] * array[1];
-      return mult;
-    default:
-      array.filter(String) = undefined;
+function calculator(arr) {
+  let operation = arr[0];
+  if (operation === "add") {
+    return arr.splice(1).reduce((prev, next) => prev + next);
+  } else if (operation === "sub") {
+    return arr.splice(1).reduce((prev, next) => prev - next);
+  } else if (operation === "mult") {
+    return arr.splice(1).reduce((prev, next) => prev * next);
+  } else {
+    return undefined;
   }
 }
 
 // Step 2
 // We need 8 total test cases. The first two is provided.
-expect(calculator(["mult", 2, 4]), 8);
 expect(calculator(["add", 2, 4]), 6);
-expect(calculator(["sub", 7, 1]), 8);
+expect(calculator(["add", 2, 4]), 6);
+expect(calculator(["sub", 7, 2]), 5);
 expect(calculator(["add", 2, 2]), 4);
 expect(calculator(["mult", 5, 1]), 5);
 expect(calculator(["sub", 7, 4]), 3);
