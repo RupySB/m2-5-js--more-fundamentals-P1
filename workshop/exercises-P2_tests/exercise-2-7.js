@@ -11,20 +11,17 @@
 // f(["fo", 3]) // "fofofo"
 // f(["foo", -1]) // ""
 
-// function f(arr) {
-//   let str = arr[0];
-//   let count = arr[1];
-//   if (typeof str !== "string" && typeof count !== "number") return undefined;
-//   return arr[0] * arr[1];
-// }
-
-function fillArray(value, len) {
-  if (typeof str !== "string" && typeof count !== "number") return undefined;
-  var arr = [];
-  for (var i = 0; i < len; i++) {
-    arr.push(value);
+function f(arr) {
+  //I forgot to read line 5 that says its an array smh.
+  const str = arr[0];
+  const count = arr[1];
+  if (typeof str !== "string" || typeof count !== "number") return undefined;
+  if (count <= 0) return " ";
+  let answer = "";
+  for (let i = 0; i < count; i++) {
+    answer = answer + str;
   }
-  return arr;
+  return answer;
 }
 
 f(["vet", 3]); // "vetvetvet"
