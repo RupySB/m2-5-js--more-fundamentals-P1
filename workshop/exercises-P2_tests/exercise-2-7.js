@@ -13,13 +13,14 @@
 
 function f(arr) {
   //I forgot to read line 5 that says its an array smh.
-  const str = arr[0];
-  const count = arr[1];
-  if (typeof str !== "string" || typeof count !== "number") return undefined;
-  if (count <= 0) return " ";
+  const string = arr[0];
+  const number = arr[1];
+  if (typeof string !== "string" || typeof number !== "number")
+    return undefined;
+  if (number <= 0) return " ";
   let answer = "";
-  for (let i = 0; i < count; i++) {
-    answer = answer + str;
+  for (let i = 0; i < number; i++) {
+    answer = answer * string;
   }
   return answer;
 }
