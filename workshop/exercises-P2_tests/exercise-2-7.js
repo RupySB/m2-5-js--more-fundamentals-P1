@@ -11,27 +11,27 @@
 // f(["fo", 3]) // "fofofo"
 // f(["foo", -1]) // ""
 
-function f(arr) {
+function newWord(arr) {
   //I forgot to read line 5 that says its an array smh.
   const string = arr[0];
   const number = arr[1];
   if (typeof string !== "string" || typeof number !== "number")
     return undefined;
-  if (number <= 0) return " ";
+  if (number <= 0) return "";
   let answer = "";
   for (let i = 0; i < number; i++) {
-    answer = answer * string;
+    answer = answer + string;
   }
   return answer;
 }
 
-f(["vet", 3]); // "vetvetvet"
-f(["hey", 2]); // "heyhey"
-f(["bye", 1]); // "bye"
-f(["cat", 3]); // "catcatcat"
-f(["puppy", 4]); // "puppypuppypuppypuppy"
-f(["cool", 5]); // "coolcoolcoolcoolcool"
-f(["fluffy", 4]); // "fluffyfluffyfluffyfluffy"
+expect(newWord(["vet", 3]), "vetvetvet");
+expect(newWord(["hey", 2]), "heyhey");
+expect(newWord(["bye", 1]), "bye");
+expect(newWord(["cat", 3]), "catcatcat");
+expect(newWord(["puppy", 4]), "puppypuppypuppypuppy");
+expect(newWord(["cool", 5]), "coolcoolcoolcoolcool");
+expect(newWord(["fluffy", 4]), "fluffyfluffyfluffyfluffy");
 
 // We need 7 test cases.
 // Don't forget to test all of the question parameters
